@@ -8,14 +8,14 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
-
+/*
 html, body Prevent scrolling
 {
     margin: 0;
     height: 100%;
     overflow: hidden;
 }
-
+*/
 
 .toggle
 {
@@ -552,27 +552,289 @@ strong
     max-width: 150px;
 }
 
-@media (max-width: 991px)
-{
-    .banner .imgSidebar
-    {
+@media (max-width: 768px) {
+    /* Hide the sidebar image to save space */
+    .banner .imgSidebar {
         display: none;
     }
-    .banner .contentBx .sidebar
-    {
+
+    /* Make the content box take full width */
+    .banner .contentBx {
         width: 100%;
-        padding: 40px;
+        padding: 20px; /* Adjust padding for smaller screens */
+        box-sizing: border-box; /* Include padding in width */
+        text-align: center; /* Center text for better readability */
     }
-    .logoText
-    {
-        left: 40px;
+
+    /* Adjust heading sizes for smaller screens */
+    .banner .contentBx h2 {
+        font-size: 2em; /* Smaller headline font size */
     }
-    .toggle
-    {
-        right: 40px;
+
+    .banner .contentBx h4, .banner .contentBx h5 {
+        font-size: 1.2em; /* Smaller subheading font size */
     }
-    .sci
-    {
-        left: 40px;
+
+    .banner .contentBx p {
+        font-size: 1em; /* Adjust paragraph font size for readability */
+    }
+
+    /* Adjust the button size */
+    .banner .contentBx .btn {
+        padding: 10px 20px;
+        font-size: 0.9em; /* Smaller font size for the button */
+    }
+
+    /* Social icons */
+    .banner .sci {
+        justify-content: center; /* Center social icons */
+        margin-top: 20px; /* Add space above social icons */
+    }
+
+    .banner .sci li img {
+        width: 30px; /* Smaller social icons */
+        height: 30px;
     }
 }
+@media (max-width: 768px) {
+    /* Text box and overall content adjustments */
+    .about_Me .content {
+        flex-direction: column; /* Stack content vertically on small screens */
+        align-items: center; /* Center-align the content for better readability */
+    }
+
+    .about_Me .textBx {
+        width: 100%; /* Full width for text box */
+        padding: 20px; /* Add padding to prevent text from touching the edges */
+        text-align: center; /* Center text for a cleaner look */
+    }
+
+    .about_Me .textBx p {
+        font-size: 0.9em; /* Slightly smaller font size for better readability */
+    }
+
+    .about_Me .downloadContainer {
+        flex-direction: column; /* Stack download boxes vertically */
+        align-items: center; /* Center-align download boxes */
+    }
+
+    .about_Me .downloadContainer .downloadBx,
+    .about_Me .downloadContainer .downloadBx1,
+    .about_Me .downloadContainer .downloadBx2 {
+        width: 80%; /* Adjust width to be responsive */
+        margin: 10px 0; /* Add vertical spacing between download boxes */
+    }
+
+    .about_Me .downloadContainer h3 {
+        font-size: 1em; /* Adjust font size for headings within download boxes */
+    }
+
+    /* Image container adjustments */
+    .about_Me .imageContainer {
+        width: 100%; /* Full width for the image container */
+        padding: 10px; /* Padding around images */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center images */
+    }
+
+    .about_Me .imageContainer img {
+        width: 90%; /* Make images responsive within the container */
+        max-width: 400px; /* Limit the max width for very large devices */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Space between images */
+    }
+}
+@media (max-width: 768px) {
+    /* General content adjustment */
+    .studies .content {
+        flex-direction: column; /* Stack the .study and .container vertically */
+    }
+
+    /* Text and section heading adjustments */
+    .studies h2, .studies h3 {
+        font-size: 1.5em; /* Reduce the font size for headings */
+    }
+
+    .studies p {
+        font-size: 0.9em; /* Smaller text for better readability */
+    }
+
+    /* Adjust paragraphs with specific classes for margin and padding */
+    .studies .study p {
+        margin-bottom: 10px; /* Reduce bottom margin */
+    }
+
+    /* Container for languages and skills */
+    .studies .container {
+        width: 100%; /* Full width to utilize space */
+        margin-top: 20px; /* Add some top margin for spacing */
+    }
+
+    /* Adjusting the display of the language and skills sections */
+    .studies .languages, .studies .skills {
+        width: 100%; /* Full width for these containers */
+        text-align: center; /* Center align the text */
+    }
+
+    .studies .pdf-button {
+        justify-content: center; /* Center PDF buttons/icons */
+        flex-wrap: wrap; /* Allow items to wrap in small spaces */
+    }
+
+    .studies .pdf-button img {
+        width: 60px; /* Smaller icons for smaller screens */
+        height: 60px; /* Maintain aspect ratio */
+        margin: 5px; /* Smaller margin */
+    }
+}
+@media (max-width: 768px) {
+    /* Adjust general settings of the section */
+    .work .title h2,
+    .work .content h2 {
+        font-size: 1.5em; /* Smaller headings on mobile */
+    }
+
+    .work .content h4 {
+        font-size: 1em; /* Smaller subheadings for clarity */
+    }
+
+    /* Make the projects grid responsive */
+    .work .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center-align the project icons */
+    }
+
+    .work .projects a {
+        width: 48%; /* Take almost half the width, allowing two items per row */
+        margin: 1%; /* Small margin for spacing */
+        display: block; /* Ensure links take the full width available */
+    }
+
+    .work .projects img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space below each image */
+    }
+
+    /* Adjust the app download icons */
+    .work .button_pdf {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center-align the app download icons */
+    }
+
+    .work .button_pdf a {
+        width: 32%; /* Three icons per row */
+        margin: 1%; /* Small margin for spacing */
+    }
+
+    .work .button_pdf img {
+        width: 100%; /* Make icons responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+@media (max-width: 768px) {
+    /* Ensure the text and title are clearly legible and appealing */
+    .contact .title {
+        text-align: center; /* Align title text to the center for better focus */
+        padding: 10px 20px; /* Adequate padding to enhance readability */
+        background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for legibility */
+        color: #ffffff; /* White color for high contrast against the background */
+        border-radius: 8px; /* Soften edges with rounded corners */
+        margin-bottom: 20px; /* Provide separation from the form */
+    }
+
+    .contact .title h2 {
+        font-size: 2em; /* Increase the size of the heading for emphasis */
+        margin-top: 0; /* Remove top margin */
+        margin-bottom: 0.5em; /* Minimal bottom margin for tight grouping */
+    }
+
+    .contact .title p {
+        font-size: 1.1em; /* A modest increase in font size for secondary text */
+        color: #dddddd; /* Lighter shade for less emphasis compared to the heading */
+    }
+
+    /* Enhance the form's visual and functional aspects */
+    .contactForm {
+        width: calc(100% - 40px); /* Full width minus padding */
+        margin: 0 auto; /* Center the form horizontally */
+        background-color: #fff; /* Solid white background for maximum contrast */
+        padding: 20px; /* Generous padding for internal spacing */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for 3D effect */
+        border-radius: 8px; /* Rounded corners for a friendly touch */
+    }
+
+    /* Styling for all input types and textarea within the form */
+    .contactForm input[type="text"],
+    .contactForm input[type="email"],
+    .contactForm textarea {
+        width: 100%; /* Utilize the full width for maximum usability */
+        padding: 10px; /* Sufficient padding for easy interaction */
+        margin-bottom: 15px; /* Space out elements vertically */
+        border: 1px solid #ccc; /* Neutral border color */
+        border-radius: 4px; /* Slightly rounded borders for a modern look */
+        font-size: 1em; /* Readable font size */
+    }
+
+    /* Make the textarea taller to accommodate more text */
+    .contactForm textarea {
+        height: 120px; /* More vertical space for extended messages */
+    }
+
+    /* Make the submit button larger and more tactile */
+    .contactForm input[type="submit"] {
+        background-color: #4CAF50; /* Attractive, noticeable color */
+        color: white; /* Contrasting text color for clarity */
+        padding: 12px 20px; /* Ample padding for a better touch target */
+        font-size: 1.1em; /* Larger font size for clear visibility */
+        border: none; /* Clean look without border */
+        border-radius: 4px; /* Consistent rounded edges */
+        transition: background-color 0.2s; /* Smooth transition for user feedback */
+    }
+
+    .contactForm input[type="submit"]:hover {
+        background-color: #45a049; /* Darker shade on hover for interactive feedback */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Sidebar adjustments */
+    .sidebar {
+        width: 100%; /* Full width of the screen for easier access */
+        position: fixed; /* Fixed position to ensure it covers the entire screen when active */
+        top: 0; /* Start from the top */
+        left: 0; /* Align to the left */
+        height: 100vh; /* Full screen height */
+        background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+        z-index: 2000; /* High z-index to overlay on top of other content */
+        display: flex; /* Use flex to align menu items */
+        flex-direction: column; /* Stack menu items vertically */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        transform: translateX(-100%); /* Start off-screen */
+        transition: transform 0.3s ease-in-out; /* Smooth transition for sliding in and out */
+    }
+
+    .sidebar.active {
+        transform: translateX(0); /* Move sidebar into view */
+    }
+
+    .sidebar ul {
+        list-style: none; /* Remove list styles */
+        padding: 0; /* Remove padding */
+    }
+
+    .sidebar ul li {
+        margin: 10px 0; /* Add vertical spacing between items */
+    }
+
+    .sidebar ul li a {
+        font-size: 1.2em; /* Increase font size for readability */
+        color: white; /* Ensure contrast for readability */
+        text-decoration: none; /* No underlines */
+    }
+}
+
