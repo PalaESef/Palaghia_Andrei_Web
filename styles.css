@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html, body Prevent scrolling
+{
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.toggle
+{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #000 url(menu1.jpeg);
+    background-size: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.toggle.active
+{
+    background: #000 url(close3.png);
+    background-size: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+section
+{
+    padding: 100px;
+    min-height: 100vh;   
+}
+
+.banner
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.banner .imgSidebar
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 100%;
+}
+
+.banner .imgSidebar img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px; 
+}
+
+.banner .contentBx,
+.sidebar
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 500px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.logoText
+{
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #333;
+    color: #fff;
+    padding: 0 5px;
+}
+
+.banner .contentBx h4
+{
+    font-size: 1.5em;
+    color: #333;
+    font-weight: 300;
+}
+
+.banner .contentBx h4 span
+{
+    color: #00bcd4;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.banner .contentBx h2
+{
+    font-size: 3em;
+    color: #333;
+    line-height: 1em;
+}
+
+p
+{
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+.btn
+{
+    background: #00bcd4;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.sidebar
+{
+    position: fixed;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    padding: 40px;
+    z-index: 100;
+    right: -100%;
+}
+
+.sidebar.active
+{
+    right: 0;
+    
+}
+
+.sidebar ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.sidebar ul li
+{
+    list-style: none;
+}
+
+.sidebar ul li a
+{
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    margin: 10px 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.sidebar ul li a:hover
+{
+    color: #00bcd4;
+
+}
+
+.sci
+{
+    position: absolute;
+    left: 100px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sci li
+{
+    margin-right: 10px;
+    list-style: none;
+}
+
+.sci li img
+{
+    transform: scale(0.7);
+    opacity: 0.7;
+}
+
+.sci li img:hover
+{
+    transform: scale(1.3);
+}
+
+.title
+{
+    width: 100%;
+    text-align: center;
+}
+
+.title h2
+{
+    position: relative;
+    color:#00bcd4;
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.title p
+{
+    max-width: 700px;
+    display: inline-block;
+}
+
+.title h2::before
+{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background: #000;
+}
+
+.title.white h2,
+.title.white p
+{
+    color: #fff;
+}
+
+.title.white h2::before
+{
+    background: #fff;
+
+}
+
+.about_Me 
+{
+    background: #000;
+}
+
+.about_Me .content
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.about_Me .content .textBx
+{
+    min-width: 49%;
+    width: 49%;
+}
+
+.about_Me .content .textBx p
+{
+    color: #fff;
+}
+
+.about_Me .content .textBx h3
+{
+    color: #fff;
+}
+
+.textBx p 
+{
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.downloadContainer 
+{
+    display: flex;
+    justify-content: flex-start;
+    color: #fff;
+    gap: 35px;
+}
+
+.downloadBx, .downloadBx1 , .downloadBx2 
+{
+    display: block;
+    width: 80px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    margin: 20px 0; /* Adds space above and below */
+}
+
+strong 
+{
+    color: #00bcd4; /* This will change the color of the text inside the <strong> tags to #00bcd4 */
+}
+
+.imageContainer {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    margin: auto;
+}
+
+.imageContainer img {
+    display: block;
+    width: 100%; /* Increase the width to make the images bigger */
+    height: auto; /* The images will take up half the height of their container */
+    margin-bottom: 10px; /* Adds space below each image */
+    margin: auto;
+    border-radius: 10px;
+    border: solid 2px white;
+    position: absolute;
+}
+
+.first-photo {
+    z-index: 3;
+    left: 250px;
+
+}
+
+.second-photo {
+    z-index: 2;
+    top: 250px;
+    left: 100px;
+}
+
+.third-photo {
+    z-index: 1;
+    right: 120px;
+}
+
+.right {
+    margin-left: 200px; /* Adjust as needed */
+}
+.studies .content {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative; /* Add this line */
+}
+
+#studies .study .p1 {
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.4;
+    padding: 10px;
+    margin-bottom: 0%;
+    border-radius: 10px;
+    border: solid 2px #00bcd4;;
+}
+
+#studies .study .p2 {
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.4;
+    padding: 10px;
+    margin-bottom: 0%;
+    border-radius: 10px;
+    border: solid 2px #e41c6f;
+}
+
+#studies .study .p3 {
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.4;
+    padding: 10px;
+    margin-bottom: 0%;
+    border-radius: 10px;
+    border: solid 2px #c00cc0;
+}
+
+#studies .title h2
+{
+    margin-top: 0;
+    color: #000000;
+}
+
+#studies .study h3 {
+    font-size: 18px;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#studies .study .p1 strong {
+    color: #4db3e2;
+}
+
+#studies .study .p2 strong {
+    color: #e41c6f;
+}
+
+#studies .study .p3 strong {
+    color: #c00cc0;
+}
+
+.studies .content .study {
+    min-width: 49%;
+    width: 49%;
+}
+
+ .container {
+    position: absolute;
+    right: 5%; /* Adjust this value to move the elements more to the right */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+    
+ .container .pdf-button img {
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    margin: 30px;
+    border: solid 3px black;
+}
+
+.work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work .title, .work .content {
+    width: 100%;
+    text-align: center;
+}
+
+.work .content {
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Change this from row to column */
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center; /* Add this to center the items vertically */
+}
+
+.content h2, .content h4 {
+    display: block;
+}
+
+.work .content h2 {
+    margin-bottom: 10px;
+}
+
+.content .button_pdf img {
+    border-radius: 20px; /* Adjust this to change the roundness of corners */
+    width: 90px;
+    height: 90px;
+    margin: 20px;
+    border: solid 3px black;
+}
+
+.content .projects img {
+    border-radius: 20px; /* Adjust this to change the roundness of corners */
+    width: 200px;
+    height: 200px;
+    margin: 20px;   
+}
+
+.contact
+{
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .contactForm
+{
+    position: relative;
+    width: 700px;
+    margin-top: 20px;
+}
+
+.contact .contactForm .row
+{
+    width: 100%;
+    display: flex;
+}
+
+.contact .contactForm .row .col150
+{
+    width: 50%;
+    margin: 10px;
+}
+
+.contact .contactForm .row .col100
+{
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+}
+
+.contact .contactForm .row input,
+.contact .contactForm .row textarea
+{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #111;
+    color: #fff;
+    font-size: 16px;
+    resize: none;
+}
+
+.contact .contactForm .row textarea
+{
+    height: 100px;
+
+}
+
+.contact .contactForm .row input[type="Submit"]
+{
+    background: #00bcd4;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    max-width: 150px;
+}
+
+@media (max-width: 991px)
+{
+    .banner .imgSidebar
+    {
+        display: none;
+    }
+    .banner .contentBx .sidebar
+    {
+        width: 100%;
+        padding: 40px;
+    }
+    .logoText
+    {
+        left: 40px;
+    }
+    .toggle
+    {
+        right: 40px;
+    }
+    .sci
+    {
+        left: 40px;
+    }
+}
